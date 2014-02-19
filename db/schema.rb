@@ -11,23 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 0) do
-=======
 ActiveRecord::Schema.define(version: 20140219230737) do
->>>>>>> ad0ea468a02c45554f32aa57051769ad6a20a656
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-<<<<<<< HEAD
-=======
-  create_table "people_teams", force: true do |t|
-    t.integer "user_id"
-    t.integer "team_id"
+  create_table "teams", force: true do |t|
   end
 
-  create_table "teams", force: true do |t|
+  create_table "teams_users", force: true do |t|
+    t.integer "team_id"
+    t.integer "user_id"
   end
 
   create_table "users", force: true do |t|
@@ -35,5 +29,4 @@ ActiveRecord::Schema.define(version: 20140219230737) do
     t.string "email"
   end
 
->>>>>>> ad0ea468a02c45554f32aa57051769ad6a20a656
 end
