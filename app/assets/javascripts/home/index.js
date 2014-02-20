@@ -1,6 +1,5 @@
 $(document).ready(function() {
-	event.preventDefault();
-	$("#submit_user").click(function(){
+	$("#submit_user").unbind('click').click(function(e){
 		alert(location.href);
 		 $.ajax({
         url: location.href,
@@ -8,4 +7,3 @@ $(document).ready(function() {
       });
 	});
 });
-
