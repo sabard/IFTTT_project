@@ -19,9 +19,11 @@
 			<div id='users'>
 				<% @users.each do |u| %>
 				<p>
-					<%= u.name %>
-					<%= u.email %>
+					<%= u.name %> | 
+					<%= u.email %> 
+					<button id="destroy_user" onclick="destroy_user(#{u.id}); return false;">X</button>
 				</p>
+
 				<% end %>
 			</div>
 		</div>
@@ -30,7 +32,7 @@
 			<div id='teams'>
 				<% @teams.each do |t| %>
 					<%= t.name %>
-					<%= t.email %>
+					<button id="destroy_team" onclick="destroy_team(#{t.id}); return false;">X</button>
 				<% end %>
 			</div
 		</div>

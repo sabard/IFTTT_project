@@ -3,13 +3,13 @@ class UsersController < ApplicationController
 		@user = User.create(user_params)
 		@user.save
 
-		respond_to do |format|
-		  format.json { render :json => @user }
-		end
+		render :nothing => true
 	end
 
 	def destroy 
 		User.destroy(params[:id])
+
+		render :nothing => true
 	end
 
 	private

@@ -3,13 +3,13 @@ class TeamsController < ApplicationController
 		@team = Team.create(team_params)
 		@team.save
 
-		respond_to do |format|
-		  format.json { render :json => @team }
-		end
+		render :nothing => true
 	end
 
 	def destroy 
 		Team.destroy(params[:id])
+
+		render :nothing => true
 	end
 
 	private

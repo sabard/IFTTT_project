@@ -1,6 +1,15 @@
 IFTTTProject::Application.routes.draw do
   root 'home#index'
 
-  put 'create_user' => 'users#create'
-  put 'create_team' => 'teams#create'
+  resources :users, :except => [:index, :show, :edit, :new] do
+  	member do
+
+  	end
+  end
+
+  resources :teams, :except => [:index, :show, :edit, :new] do
+  	member do
+
+  	end
+  end
 end
