@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 20140219230737) do
   enable_extension "plpgsql"
 
   create_table "teams", force: true do |t|
+    t.string "name"
   end
 
   create_table "teams_users", force: true do |t|

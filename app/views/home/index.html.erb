@@ -1,3 +1,4 @@
+
 <html>
 	<head>
 		<%= javascript_include_tag "home/index" %>
@@ -21,7 +22,7 @@
 				<p>
 					<%= u.name %> | 
 					<%= u.email %> 
-					<button id="destroy_user" onclick="destroy_user(#{u.id}); return false;">X</button>
+					<button id="destroy_user" onclick='destroy_user("<%= u.id %>"); return false;'>X</button>
 				</p>
 
 				<% end %>
@@ -31,8 +32,10 @@
 			<h1> Teams </h1>
 			<div id='teams'>
 				<% @teams.each do |t| %>
-					<%= t.name %>
-					<button id="destroy_team" onclick="destroy_team(#{t.id}); return false;">X</button>
+				 	<p>
+						<%= t.name %>
+						<button id="destroy_team" onclick='destroy_team("<%= t.id %>"); return false;'>X</button>
+					</p>
 				<% end %>
 			</div
 		</div>
