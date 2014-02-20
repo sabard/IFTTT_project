@@ -16,17 +16,23 @@
 		</div>
 		<div>
 			<h1> Users </h1>
-			<% @users.each do |u| %>
-				<%= u.name %>
-				<%= u.email %>
-			<% end %>
+			<div id='users'>
+				<% @users.each do |u| %>
+				<p>
+					<%= u.name %>
+					<%= u.email %>
+				</p>
+				<% end %>
+			</div>
 		</div>
 		<div>
 			<h1> Teams </h1>
-			<% @teams.each do |t| %>
-				<%= t.name %>
-				<%= t.email %>
-			<% end %>
+			<div id='teams'>
+				<% @teams.each do |t| %>
+					<%= t.name %>
+					<%= t.email %>
+				<% end %>
+			</div
 		</div>
 	</body>
 </html>
