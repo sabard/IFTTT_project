@@ -1,5 +1,6 @@
 $(document).ready(function() {
   user_modal();
+  team_modal();
 });
 
 function user_modal() {
