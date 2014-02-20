@@ -1,10 +1,32 @@
 <html>
 	<head>
-
+		<script type="text/javascript" src="assets/home/index.js" ></script>
 	</head>
 	<body>
-		Create User:
-			
-		Create Team:
+		<div>
+			<h1> Create User </h1>
+			<input type="text" id="user_name" placeholder="Name">
+			<input type="text" id="user_email" placeholder="Email">
+			<button id="submit_user">Submit</button>
+		</div>
+		<div>
+			<h1> Create Team </h1>
+			<input type="text" id="team_name" placeholder="Name">
+			<button id="submit_team">Submit</button>
+		</div>
+		<div>
+			<h1> Users </h1>
+			<% @users.each do |u| %>
+				<%= u.name %>
+				<%= u.email %>
+			<% end %>
+		</div>
+		<div>
+			<h1> Teams </h1>
+			<% @teams.each do |t| %>
+				<%= t.name %>
+				<%= t.email %>
+			<% end %>
+		</div>
 	</body>
 </html>
